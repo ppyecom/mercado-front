@@ -12,6 +12,8 @@ type Metrics = {
   estibadoresActivos: number;
   turnosHoy: number;
   ingresosHoy: number;
+  incidenciasSeguridadPendientes: number;
+  incidenciasPendientesTotal: number;
 };
 
 function Card({ title, value, hint }: { title: string; value: any; hint?: string }) {
@@ -45,6 +47,11 @@ export default function DashboardPage() {
         <Card title="Estibadores activos" value={m.estibadoresActivos} />
         <Card title="Turnos hoy" value={m.turnosHoy} hint="Tarifario digital aplicado" />
         <Card title="Ingresos mercaderia hoy" value={m.ingresosHoy} />
+        <Card
+          title="Incidencias de seguridad pendientes"
+          value={m.incidenciasSeguridadPendientes}
+          hint={`Pendientes totales: ${m.incidenciasPendientesTotal}`}
+        />
       </div>
     </div>
   );
