@@ -6,8 +6,8 @@ import { saveSession } from "@/lib/auth";
 
 export default function LoginPage() {
   const router = useRouter();
-  const [email, setEmail] = useState("admin@laparada.gob.pe");
-  const [password, setPassword] = useState("admin123");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
@@ -45,7 +45,6 @@ export default function LoginPage() {
         <button disabled={loading} className="w-full bg-blue-600 text-white py-2 rounded disabled:opacity-50">
           {loading ? "Ingresando..." : "Ingresar"}
         </button>
-        <p className="text-xs text-gray-500">Demo: admin@laparada.gob.pe / admin123</p>
       </form>
     </main>
   );
