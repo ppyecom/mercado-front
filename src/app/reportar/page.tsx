@@ -9,7 +9,7 @@ const TIPOS = [
   { v: "OTRO", label: "Otro" },
 ];
 
-const BASE = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:4000/api";
+const BASE = (process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:4000/api").replace(/\/+$/, "");
 
 export default function ReportarPage() {
   const [tipo, setTipo] = useState("SEGURIDAD");

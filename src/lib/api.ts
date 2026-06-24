@@ -1,4 +1,6 @@
-const BASE = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:4000/api";
+// Base de la API. En produccion se define NEXT_PUBLIC_API_URL (Vercel);
+// se normaliza quitando una posible barra final para evitar // en las rutas.
+const BASE = (process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:4000/api").replace(/\/+$/, "");
 
 function getToken(): string | null {
   if (typeof window === "undefined") return null;
