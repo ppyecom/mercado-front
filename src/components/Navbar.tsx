@@ -10,6 +10,7 @@ const items = [
   ["/estibadores", "Estibadores"],
   ["/turnos", "Turnos"],
   ["/mercaderia", "Mercaderia"],
+  ["/incidencias", "Incidencias"],
 ];
 
 export function Navbar() {

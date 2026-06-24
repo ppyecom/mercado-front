@@ -8,9 +8,14 @@ export default function Home() {
         <p className="text-gray-600">
           Sistema de Gestion y Formalizacion del Mercado Mayorista de La Parada (La Victoria, Lima).
         </p>
-        <Link href="/login" className="inline-block px-6 py-3 bg-blue-600 text-white rounded">
-          Ingresar
-        </Link>
+        <div className="flex gap-3 justify-center">
+          <Link href="/login" className="inline-block px-6 py-3 bg-blue-600 text-white rounded">
+            Ingresar (admin)
+          </Link>
+          <Link href="/reportar" className="inline-block px-6 py-3 bg-white border border-blue-600 text-blue-600 rounded">
+            Reportar incidencia
+          </Link>
+        </div>
       </div>
     </main>
   );
